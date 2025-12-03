@@ -11,15 +11,7 @@ for line in lines:
     for i in range(int(first), int(last) + 1):
         comb = f"{i}"
         for k in range(1, len(comb)//2 + 1):
-            equal = True
-            if int(len(comb)//k * k) != len(comb):
-                    equal = False
-                    continue
-            for m in range (0, len(comb), k):
-                if comb[m:m+k] != comb[0:k]:
-                    equal = False
-                    break
-            if equal:
+            if comb[0:k]*(len(comb)//(k)) == comb:
                 total += i
                 break
             
