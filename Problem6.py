@@ -13,12 +13,8 @@ def findMax(a: str) -> (int, int):
     return (max, index)
 
 for bat in bats:
-    temp = bat
     for i in range(11, -1, -1):
         dig = findMax(temp[0:len(temp)-i])
         total += dig[0] * (10 ** i)
-        if(dig[0] * (10 ** i) > 999999999999):
-            print(dig[0] * (10 ** i))
-        temp = temp[dig[1] + 1:]
         
 print(total)
